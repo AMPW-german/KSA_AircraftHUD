@@ -10,10 +10,9 @@ Forum: [https://forums.ahwoo.com/threads/aircraft-hud.618/](https://forums.ahwoo
 
 ### Dependencies
 
-[https://github.com/StarMapLoader/StarMap/releases](https://github.com/StarMapLoader/StarMap/releases)
-
-[https://github.com/MrJeranimo/ModMenu/releases](https://github.com/MrJeranimo/ModMenu/releases)
-
+* [https://github.com/StarMapLoader/StarMap/releases](https://github.com/StarMapLoader/StarMap/releases)
+* [https://github.com/MrJeranimo/ModMenu/releases](https://github.com/MrJeranimo/ModMenu/releases)
+* [.NET 10 SDK/Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 
 ### Installation
 
