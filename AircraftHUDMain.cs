@@ -2,6 +2,7 @@
 using Brutal.Numerics;
 using KSA;
 using ModMenu;
+using ShaderExtensions;
 using StarMap.API;
 using System.Diagnostics;
 using System.Drawing;
@@ -696,6 +697,7 @@ namespace AircraftHUD
         unsafe public void OnAfterUI(double dt)
         {
             ImGuiWindowFlags menuFlags = ImGuiWindowFlags.MenuBar;
+            KeyHash myShader = KeyHash.Make("HudTestShader");
 
             // options page
             if (HUD.settingsPageOn)
@@ -842,6 +844,8 @@ namespace AircraftHUD
                 ImGuiWindowFlags.NoNavFocus;
             ImGui.Begin("HUDFullscreenWindow", flags);
             ImDrawListPtr draw_list = ImGui.GetWindowDrawList();
+
+            SxImGui.CustomShader(myShader);
 
             // ALTITUDE (MSL / RADAR)
             bool useRadarAlt = false;
