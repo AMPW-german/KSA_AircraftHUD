@@ -2,6 +2,8 @@
 <Assets>
 	<ImGuiShader Id="HudTestShader">
 	    <Vertex Id="ImGuiVertexPost" />
-		<Fragment Path="Shaders/SaturationPost.frag" />
+		<Fragment Path="Shaders/SaturationPost.frag">
+			<AircraftHUDBufferAsset Id="HudTestBuffer" Size="1" />
+		</Fragment>
 	</ImGuiShader>
 </Assets>

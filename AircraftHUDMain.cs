@@ -699,6 +699,17 @@ namespace AircraftHUD
             ImGuiWindowFlags menuFlags = ImGuiWindowFlags.MenuBar;
             KeyHash myShader = KeyHash.Make("HudTestShader");
 
+            if (AircraftHUDBuffer.LookupSpan != null)
+            {
+                float value = 0f;
+                Vehicle active = Program.ControlledVehicle;
+                if (active != null) value = active.GetManualThrottle();
+
+                KeyHash testBuffer = KeyHash.Make("HudTestBuffer");
+                Span<AircraftHUDBuffer> bufferSpan = AircraftHUDBuffer.LookupSpan(testBuffer);
+                bufferSpan[0].V1 = value;
+            }
+
             // options page
             if (HUD.settingsPageOn)
             {
